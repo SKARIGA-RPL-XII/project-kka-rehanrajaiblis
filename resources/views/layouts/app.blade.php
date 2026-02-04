@@ -24,7 +24,7 @@
                     <a href="{{ url('/') }}" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
                     <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">Tentang</a>
                     <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium">Layanan</a>
-                    <a href="#doctors" class="text-gray-700 hover:text-blue-600 font-medium">Dokter</a>
+                    <a href="{{ route('blog.index') }}" class="text-gray-700 hover:text-blue-600 font-medium">Artikel</a>
                     <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Kontak</a>
                     
                     @auth
@@ -74,6 +74,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <a href="{{ route('articles.index') }}" class="text-gray-700 hover:text-blue-600 font-medium mr-4">
+                                    <i class="fas fa-newspaper mr-1"></i>Dashboard Artikel
+                                </a>
                             @endif
                             
                             <div class="relative">

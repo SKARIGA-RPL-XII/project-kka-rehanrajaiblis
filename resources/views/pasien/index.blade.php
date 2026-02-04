@@ -63,7 +63,8 @@
                                         {{ ucfirst($user->role) }}
                                     </span>
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ $user->created_at->format('d/m/Y') }}</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ $user->created_at ? $user->created_at->format('d/m/Y') : '-' }}
+                                </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                                     <a href="{{ route('pasien.edit', $user) }}" class="text-blue-600 hover:text-blue-900">
                                         <i class="fas fa-edit"></i>
